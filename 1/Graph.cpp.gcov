@@ -1,0 +1,97 @@
+        -:    0:Source:Graph.cpp
+        -:    1:#include "Graph.hpp"
+        -:    2:#include <iostream>
+        -:    3:#include <stack>
+        -:    4:
+        -:    5:// Constructor
+        1:    6:Graph::Graph(int vertices) : V(vertices) {
+        1:    7:    adj.resize(V);
+        1:    8:    degree.resize(V, 0);
+        1:    9:}
+        -:   10:
+        -:   11:// Add edge to graph
+        8:   12:void Graph::addEdge(int v1, int v2) {
+        8:   13:    adj[v1].push_back(v2);
+        8:   14:    adj[v2].push_back(v1);
+        8:   15:    degree[v1]++;
+        8:   16:    degree[v2]++;
+        8:   17:}
+        -:   18:
+        -:   19:// Check if Euler circuit exists
+        1:   20:bool Graph::hasEulerCircuit() const {
+        4:   21:    for (int i = 0; i < V; i++) {
+        4:   22:        if (degree[i] % 2 != 0) {
+        1:   23:            return false;
+        -:   24:        }
+        -:   25:    }
+    #####:   26:    return true;
+        -:   27:}
+        -:   28:
+        -:   29:// Find Euler circuit
+    #####:   30:std::vector<int> Graph::findEulerCircuit() {
+    #####:   31:    std::vector<int> circuit;
+    #####:   32:    if (!hasEulerCircuit()) {
+    #####:   33:        return circuit;
+        -:   34:    }
+        -:   35:    
+        -:   36:    // Create a copy of the adjacency list
+    #####:   37:    std::vector<std::list<int>> adjCopy = adj;
+    #####:   38:    std::stack<int> currentPath;
+    #####:   39:    currentPath.push(0);  // Start from vertex 0
+        -:   40:
+    #####:   41:    while (!currentPath.empty()) {
+    #####:   42:        int v = currentPath.top();
+        -:   43:
+    #####:   44:        if (adjCopy[v].empty()) {
+    #####:   45:            circuit.push_back(v);
+    #####:   46:            currentPath.pop();
+        -:   47:        } else {
+    #####:   48:            int u = adjCopy[v].front();
+    #####:   49:            currentPath.push(u);
+    #####:   50:            adjCopy[v].remove(u);
+    #####:   51:            adjCopy[u].remove(v);
+        -:   52:        }
+        -:   53:    }
+        -:   54:
+    #####:   55:    return circuit;
+    #####:   56:}
+        -:   57:
+        -:   58:// Print graph
+        1:   59:void Graph::print() const {
+        6:   60:    for (int v = 0; v < V; ++v) {
+        5:   61:        std::cout << "Vertex " << v << " -> ";
+       21:   62:        for (int u : adj[v]) {
+       16:   63:            std::cout << u << " ";
+        -:   64:        }
+        5:   65:        std::cout << "\n";
+        -:   66:    }
+        1:   67:}
+        -:   68:
+        -:   69:// Generate random graph
+        1:   70:Graph Graph::generateRandom(int vertices, int edges, int seed) {
+        1:   71:    Graph g(vertices);
+        1:   72:    std::mt19937 gen(seed);
+        1:   73:    std::uniform_int_distribution<> dis(0, vertices - 1);
+        -:   74:
+        1:   75:    int addedEdges = 0;
+       22:   76:    while (addedEdges < edges) {
+       20:   77:        int v1 = dis(gen);
+       20:   78:        int v2 = dis(gen);
+        -:   79:        
+       20:   80:        if (v1 != v2) {
+       14:   81:            bool edgeExists = false;
+       27:   82:            for (int neighbor : g.adj[v1]) {
+       19:   83:                if (neighbor == v2) {
+        6:   84:                    edgeExists = true;
+        6:   85:                    break;
+        -:   86:                }
+        -:   87:            }
+        -:   88:            
+       14:   89:            if (!edgeExists) {
+        8:   90:                g.addEdge(v1, v2);
+        8:   91:                addedEdges++;
+        -:   92:            }
+        -:   93:        }
+        -:   94:    }
+        2:   95:    return g;
+    =====:   96:}

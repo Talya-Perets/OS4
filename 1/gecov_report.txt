@@ -1,0 +1,113 @@
+File '/usr/include/c++/13/bits/new_allocator.h'
+Lines executed:48.33% of 60
+Creating 'new_allocator.h.gcov'
+
+File '/usr/include/c++/13/ext/aligned_buffer.h'
+Lines executed:75.00% of 16
+Creating 'aligned_buffer.h.gcov'
+
+File '/usr/include/c++/13/bits/stl_list.h'
+Lines executed:48.00% of 150
+Creating 'stl_list.h.gcov'
+
+File '/usr/include/c++/13/bits/alloc_traits.h'
+Lines executed:88.89% of 9
+Creating 'alloc_traits.h.gcov'
+
+File '/usr/include/c++/13/bits/list.tcc'
+Lines executed:46.15% of 39
+Creating 'list.tcc.gcov'
+
+File '/usr/include/c++/13/bits/allocator.h'
+Lines executed:20.00% of 5
+Creating 'allocator.h.gcov'
+
+File '/usr/include/c++/13/bits/stl_construct.h'
+Lines executed:64.58% of 48
+Creating 'stl_construct.h.gcov'
+
+File '/usr/include/c++/13/bits/move.h'
+Lines executed:46.67% of 30
+Creating 'move.h.gcov'
+
+File '/usr/include/c++/13/bits/stl_vector.h'
+Lines executed:58.92% of 241
+Creating 'stl_vector.h.gcov'
+
+File '/usr/include/c++/13/bits/stl_iterator.h'
+Lines executed:32.65% of 49
+Creating 'stl_iterator.h.gcov'
+
+File 'main.cpp'
+Lines executed:47.83% of 46
+Creating 'main.cpp.gcov'
+
+File 'Graph.hpp'
+No executable lines
+Removing 'Graph.hpp.gcov'
+
+File '/usr/include/c++/13/bits/stl_algobase.h'
+Lines executed:41.26% of 143
+Creating 'stl_algobase.h.gcov'
+
+File '/usr/include/c++/13/bits/cpp_type_traits.h'
+Lines executed:66.67% of 6
+Creating 'cpp_type_traits.h.gcov'
+
+File '/usr/include/c++/13/ext/alloc_traits.h'
+Lines executed:0.00% of 1
+Creating 'alloc_traits.h.gcov'
+
+File '/usr/include/c++/13/bits/stl_iterator_base_types.h'
+Lines executed:100.00% of 1
+Creating 'stl_iterator_base_types.h.gcov'
+
+File '/usr/include/c++/13/bits/stl_uninitialized.h'
+Lines executed:57.89% of 76
+Creating 'stl_uninitialized.h.gcov'
+
+File '/usr/include/c++/13/bits/deque.tcc'
+Lines executed:0.00% of 67
+Creating 'deque.tcc.gcov'
+
+File '/usr/include/c++/13/bits/stl_deque.h'
+Lines executed:0.00% of 137
+Creating 'stl_deque.h.gcov'
+
+File '/usr/include/c++/13/bits/random.tcc'
+Lines executed:100.00% of 40
+Creating 'random.tcc.gcov'
+
+File '/usr/include/c++/13/bits/random.h'
+Lines executed:100.00% of 23
+Creating 'random.h.gcov'
+
+File '/usr/include/c++/13/bits/allocated_ptr.h'
+Lines executed:90.00% of 10
+Creating 'allocated_ptr.h.gcov'
+
+File '/usr/include/c++/13/bits/uniform_int_dist.h'
+Lines executed:72.50% of 40
+Creating 'uniform_int_dist.h.gcov'
+
+File '/usr/include/c++/13/bits/vector.tcc'
+Lines executed:45.45% of 99
+Creating 'vector.tcc.gcov'
+
+File '/usr/include/c++/13/bits/stl_stack.h'
+Lines executed:0.00% of 13
+Creating 'stl_stack.h.gcov'
+
+File 'Graph.cpp'
+Lines executed:66.10% of 59
+Creating 'Graph.cpp.gcov'
+
+File '/usr/include/c++/13/new'
+Lines executed:66.67% of 3
+Creating 'new.gcov'
+
+File '/usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h'
+Lines executed:100.00% of 2
+Creating 'c++config.h.gcov'
+
+Lines executed:46.85% of 1413

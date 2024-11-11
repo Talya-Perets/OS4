@@ -1,0 +1,100 @@
+==18060== Memcheck, a memory error detector
+==18060== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==18060== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==18060== Command: ./hello Hello\ World
+==18060== 
+==18060== Conditional jump or move depends on uninitialised value(s)
+==18060==    at 0x109234: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060== 
+==18060== Use of uninitialised value of size 8
+==18060==    at 0x484F374: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x109248: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060== 
+==18060== Conditional jump or move depends on uninitialised value(s)
+==18060==    at 0x484F3B5: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x109248: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060== 
+==18060== Conditional jump or move depends on uninitialised value(s)
+==18060==    at 0x484F3BA: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x109248: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060== 
+==18060== Conditional jump or move depends on uninitialised value(s)
+==18060==    at 0x484F3C9: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x109248: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060== 
+==18060== Invalid write of size 1
+==18060==    at 0x484EF5C: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x109277: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060==  Address 0x4a7d049 is 0 bytes after a block of size 9 alloc'd
+==18060==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x10922A: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060== 
+==18060== Invalid write of size 1
+==18060==    at 0x484EF6E: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x109277: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060==  Address 0x4a7d04a is 1 bytes after a block of size 9 alloc'd
+==18060==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x10922A: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060== 
+==18060== Invalid read of size 1
+==18060==    at 0x484F234: strlen (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x10928E: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060==  Address 0x4a7d049 is 0 bytes after a block of size 9 alloc'd
+==18060==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x10922A: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060== 
+==18060== Invalid write of size 2
+==18060==    at 0x109299: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060==  Address 0x4a7d04a is 1 bytes after a block of size 9 alloc'd
+==18060==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x10922A: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060== 
+==18060== Invalid read of size 1
+==18060==    at 0x484F392: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x109248: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060==  Address 0x4a7d049 is 0 bytes after a block of size 9 alloc'd
+==18060==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x10922A: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060== 
+==18060== Invalid read of size 1
+==18060==    at 0x484F234: strlen (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x48D2D97: __printf_buffer (vfprintf-process-arg.c:435)
+==18060==    by 0x48D372A: __vfprintf_internal (vfprintf-internal.c:1544)
+==18060==    by 0x48C81A2: printf (printf.c:33)
+==18060==    by 0x1092D0: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060==  Address 0x4a7d0a5 is 0 bytes after a block of size 21 alloc'd
+==18060==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x10922A: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060== 
+==18060== Invalid read of size 1
+==18060==    at 0x4852EE0: memmove (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x48C8D77: memcpy (string_fortified.h:29)
+==18060==    by 0x48C8D77: __printf_buffer_write (Xprintf_buffer_write.c:39)
+==18060==    by 0x48D150B: __printf_buffer (vfprintf-process-arg.c:501)
+==18060==    by 0x48D372A: __vfprintf_internal (vfprintf-internal.c:1544)
+==18060==    by 0x48C81A2: printf (printf.c:33)
+==18060==    by 0x1092D0: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060==  Address 0x4a7d0a5 is 0 bytes after a block of size 21 alloc'd
+==18060==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x10922A: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060== 
+You entered: ‡ê./hello Hello World
+==18060== 
+==18060== HEAP SUMMARY:
+==18060==     in use at exit: 30 bytes in 2 blocks
+==18060==   total heap usage: 3 allocs, 1 frees, 4,126 bytes allocated
+==18060== 
+==18060== 30 bytes in 2 blocks are definitely lost in loss record 1 of 1
+==18060==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18060==    by 0x10922A: main (in /home/vboxuser/Desktop/os 4/2/hello)
+==18060== 
+==18060== LEAK SUMMARY:
+==18060==    definitely lost: 30 bytes in 2 blocks
+==18060==    indirectly lost: 0 bytes in 0 blocks
+==18060==      possibly lost: 0 bytes in 0 blocks
+==18060==    still reachable: 0 bytes in 0 blocks
+==18060==         suppressed: 0 bytes in 0 blocks
+==18060== 
+==18060== Use --track-origins=yes to see where uninitialised values come from
+==18060== For lists of detected and suppressed errors, rerun with: -s
+==18060== ERROR SUMMARY: 20 errors from 13 contexts (suppressed: 0 from 0)
